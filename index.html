@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#130b1b">
+<title>إلى ملاك ♡ | عيد ميلاد سعيد</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap');
+
+:root {
+  --pink: #ff8dbd;
+  --rose: #ff4f91;
+  --gold: #f8d9a0;
+  --night: #100817;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 20% 10%, #3a1742 0%, transparent 38%),
+    radial-gradient(ellipse at 80% 70%, #31152e 0%, transparent 35%),
+    var(--night);
+  color: #fff7fb;
+  font-family: 'Cairo', sans-serif;
+  overflow-x: hidden;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .3;
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 110px, #fff, transparent),
+    radial-gradient(2px 2px at 170px 70px, #ffd9eb, transparent);
+  background-size: 290px 220px;
+  animation: twinkle 5s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes twinkle {
+  to {
+    opacity: .6;
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.12);
+  }
+  30% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.08);
+  }
+}
+
+main {
+  width: min(100%, 900px);
+  margin: auto;
+  padding: 24px 18px 60px;
+}
+
+.hero {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 8px 35px;
+}
+
+.mini-label {
+  font-size: .8rem;
+  letter-spacing: 2px;
+  color: var(--gold);
+  border: 1px solid #f8d9a055;
+  border-radius: 99px;
+  padding: 7px 17px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-family: 'Amiri', serif;
+  font-size: clamp(3.3rem, 12vw, 6.5rem);
+  line-height: 1;
+  margin: 0;
+  color: #fff1f7;
+  text-shadow: 0 0 28px #ff72b6a8;
+}
+
+.hero h1 span {
+  color: var(--pink);
+}
+
+.hero p {
+  max-width: 560px;
+  color: #e8d8e5;
+  line-height: 2;
+  font-size: 1rem;
+  margin: 24px auto;
+}
+
+.heart {
+  font-size: 2rem;
+  color: var(--rose);
+  animation: heartbeat 1.8s infinite;
+  display: inline-block;
+}
+
+.btn {
+  font: 700 1rem 'Cairo', sans-serif;
+  color: #2a1022;
+  background: linear-gradient(135deg, #ffe6ef, #ff8dbd);
+  border: 0;
+  border-radius: 99px;
+  padding: 13px 25px;
+  cursor: pointer;
+  box-shadow: 0 8px 30px #ff4f9135;
+  transition: .25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px #ff4f9166;
+}
+
+.btn:disabled {
+  opacity: .8;
+  cursor: default;
+}
+
+.hint {
+  font-size: .75rem;
+  color: #bfaabb;
+  margin-top: 17px;
+}
+
+.section {
+  padding: 48px 0;
+  text-align: center;
+  animation: rise .8s both;
+}
+
+.section h2 {
+  font-family: 'Amiri', serif;
+  font-size: clamp(2rem, 7vw, 3.1rem);
+  margin: 0 0 10px;
+  color: var(--pink);
+}
+
+.sub {
+  color: #cbb8ca;
+  line-height: 1.9;
+  margin: 0 auto 25px;
+  max-width: 600px;
+}
+
+.card {
+  background: linear-gradient(145deg, #ffffff0e, #ffffff04);
+  border: 1px solid #ffb5d226;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 18px 60px #0002;
+  backdrop-filter: blur(10px);
+}
+
+/* الظرف */
+
+.envelope-wrap {
+  perspective: 1000px;
+  margin: 25px auto 0;
+  width: min(100%, 420px);
+  height: 270px;
+  display: grid;
+  place-items: center;
+}
+
+.envelope {
+  position: relative;
+  width: min(88vw, 360px);
+  height: 220px;
+  cursor: pointer;
+  filter: drop-shadow(0 26px 24px #0008);
+  transition: transform .55s;
+  transform-style: preserve-3d;
+}
+
+.envelope:before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: -13px;
+  height: 24px;
+  border-radius: 50%;
+  background: #0008;
+  filter: blur(15px);
+  z-index: -1;
+}
+
+.env-base {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: linear-gradient(
+    135deg,
+    #f6d5df 0%,
+    #c77898 48%,
+    #8f3f65 100%
+  );
+  overflow: hidden;
+  box-shadow:
+    inset 0 2px 3px #fff9,
+    inset 0 -8px 14px #64234466;
+}
+
+.env-base:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(145deg, transparent 45%, #8c3e6255 46%, transparent 48%),
+    linear-gradient(35deg, transparent 49%, #fff3 50%, transparent 51%);
+  z-index: 1;
+}
+
+.env-base:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #fff3, transparent 42%, #67244822);
+  pointer-events: none;
+}
+
+.env-side {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  clip-path: polygon(0 0, 50% 56%, 100% 0, 100% 100%, 0 100%);
+  background: linear-gradient(
+    135deg,
+    #f8dbe4 0%,
+    #d98eaa 48%,
+    #b86b8c 100%
+  );
+  border-radius: 7px;
+}
+
+.env-front {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    145deg,
+    #f4c8d7 0%,
+    #d58aa7 45%,
+    #a9577c 100%
+  );
+  clip-path: polygon(0 0, 50% 56%, 100% 0, 100% 100%, 0 100%);
+  z-index: 4;
+  filter: drop-shadow(0 -2px 3px #70254455);
+}
+
+.env-front:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #fff4, transparent 35%, #74284922);
+  clip-path: polygon(0 0, 50% 56%, 100% 0, 100% 100%, 0 100%);
+}
+
+.env-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 68%;
+  background: linear-gradient(
+    150deg,
+    #fff0f5 0%,
+    #edb7ca 48%,
+    #bd6d90 100%
+  );
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top;
+  transition: transform .85s cubic-bezier(.2, .75, .2, 1);
+  z-index: 5;
+  filter: drop-shadow(0 7px 5px #64213e77);
+  backface-visibility: visible;
+}
+
+.env-flap:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, #fff7, transparent 45%, #8f3f651f);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.envelope.open .env-flap {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+.envelope.open .seal {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(.2);
+}
+
+.envelope.open .letter {
+  position: absolute;
+  z-index: 3;
+  left: 7%;
+  width: 86%;
+  height: 85%;
+  top: 5%;
+  padding: 18px 16px;
+  background: linear-gradient(#fff8ef, #f4dfd8);
+  color: #6d2c4b;
+  border-radius: 5px;
+  transition: transform .9s ease, top .9s ease;
+  overflow: auto;
+  text-align: right;
+  box-shadow: 0 0 10px #0002;
+}
+
+.envelope.open {
+  transform: translateY(35px);
+}
+
+.seal {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 30% 25%, #ffb3c8, #a51d52);
+  box-shadow: 0 3px 9px #69213d99;
+  color: #fff;
+  font-size: 1.4rem;
+  transition: .4s;
+}
+
+.letter {
+  position: absolute;
+  z-index: 3;
+  left: 7%;
+  width: 86%;
+  height: 85%;
+  top: 5%;
+  padding: 18px 16px;
+  background: linear-gradient(145deg, #fffaf2, #f1d9d5);
+  color: #6d2c4b;
+  border-radius: 5px;
+  transition:
+    transform 1s cubic-bezier(.18, .8, .25, 1),
+    top 1s cubic-bezier(.18, .8, .25, 1),
+    box-shadow 1s;
+  overflow: auto;
+  text-align: right;
+  box-shadow: 0 5px 18px #0003;
+  transform: translateZ(2px) rotateX(0deg);
+}
+
+.letter h3 {
+  font-family: 'Amiri', serif;
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0 0 8px;
+  color: #9c315d;
+}
+
+.letter p {
+  font-size: .86rem;
+  line-height: 1.9;
+  margin: 7px 0;
+}
+
+.envelope.open .env-flap {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+.envelope.open .seal {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(.2);
+}
+
+.envelope.open .letter {
+  top: -42%;
+  transform: translateY(-7px) translateZ(24px) rotateX(2deg);
+  z-index: 7;
+  height: 135%;
+  box-shadow: 0 18px 35px #0005;
+  transition-delay: .18s;
+}
+
+.envelope.open {
+  transform: translateY(35px);
+}
+
+.tap-note {
+  font-size: .8rem;
+  color: #d7b7cd;
+  margin-top: 4px;
+}
+
+/* قسم الممرضة */
+
+.nurse-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.nurse-item {
+  padding: 20px 10px;
+  border-radius: 20px;
+  background: #ffffff08;
+  border: 1px solid #ffb5d21c;
+}
+
+.nurse-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.nurse-item strong {
+  display: block;
+  color: #ffd6e7;
+  margin-bottom: 5px;
+}
+
+.nurse-item span:last-child {
+  font-size: .78rem;
+  color: #cdb9ca;
+  line-height: 1.7;
+}
+
+/* الكيكة والأمنيات */
+
+.cake {
+  font-size: 5rem;
+  filter: drop-shadow(0 0 25px #ff8dbd44);
+  animation: float 4s ease-in-out infinite;
+}
+
+.wishes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.wish {
+  padding: 17px 12px;
+  border-radius: 16px;
+  background: #ff8dbd0d;
+  border: 1px solid #ff8dbd24;
+  color: #ffe7f1;
+}
+
+.wish b {
+  color: var(--pink);
+  display: block;
+  font-size: 1.15rem;
+  margin-bottom: 5px;
+}
+
+.final-note {
+  font-family: 'Amiri', serif;
+  font-size: 1.45rem;
+  line-height: 2;
+  color: #ffe9f3;
+}
+
+.final-note strong {
+  color: var(--pink);
+}
+
+.footer {
+  padding: 30px 0 0;
+  text-align: center;
+  color: #9d839d;
+  font-size: .78rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#surprise {
+  display: none;
+}
+
+#surprise.show {
+  display: block;
+}
+
+.confetti {
+  position: fixed;
+  top: -20px;
+  z-index: 20;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+.progress {
+  height: 3px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  background: linear-gradient(90deg, #ff8dbd, #f8d9a0);
+  z-index: 30;
+  box-shadow: 0 0 12px #ff8dbd;
+}
+
+@media (max-width: 520px) {
+  main {
+    padding-inline: 14px;
+  }
+
+  .hero {
+    min-height: 88vh;
+  }
+
+  .nurse-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nurse-item {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    gap: 12px;
+    padding: 13px;
+  }
+
+  .nurse-icon {
+    margin: 0;
+    min-width: 42px;
+  }
+
+  .wishes {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    padding: 19px 14px;
+  }
+
+  .envelope-wrap {
+    height: 255px;
+  }
+
+  .envelope.open .letter {
+    top: -34%;
+  }
+
+  .letter p {
+    font-size: .8rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="progress" id="progress"></div>
+
+<main>
+
+<section class="hero">
+  <div class="mini-label">A LITTLE SURPRISE, JUST FOR YOU ✦</div>
+
+  <div class="heart">♡</div>
+
+  <h1> كل عام انتي بالف خير يا حبيبت قلبي  <span></span></h1>
+
+  <p>
+    مش كل يوم بيكون عادي… بس هاد اليوم اجا فيه قمر نور الحياه كلها      
+             🎀
+  </p>
+
+  <button class="btn" id="startBtn">ابدئي  ✧</button>
+
+  <div class="hint">
+    حضّري قلبك… في رسالة صغيرة ناطرتكِ 💌
+  </div>
+</section>
+
+
+<div id="surprise">
+
+<section class="section">
+  <h2>💌</h2>
+
+  <p class="sub">
+    في كلام ما بينحكى بسرعة، عشان هيك كتبته إلكِ…
+    اضغطي على الظرف وافتحي رسالتك.
+  </p>
+
+  <div class="card">
+
+    <div class="envelope-wrap">
+
+      <div class="envelope" id="envelope"
+           role="button" tabindex="0"
+           aria-label="افتحي الرسالة">
+
+        <div class="env-base"></div>
+        <div class="env-side"></div>
+
+        <div class="letter">
+          <h3> ملاكي ♡</h3>
+
+          <p>
+                كل عام وإنتِ أجمل شي صار بحياتي، وكل عام وإنتِ حبيبتي وقلبي وروحي وأقرب إنسانة لإلي 
+
+اليوم مو بس عيد ميلادك، اليوم عيد ميلاد الشخص اللي خلّى لحياتي معنى أحلى، واللي بوجوده صارت أيامي أجمل، وقلبي يعرف شو يعني يكون مبسوط من قلبه. بتمنّى من كل قلبي إنك تضلّي تضحكي هالضحكة الحلوة اللي بتخلّيني أنسى الدنيا كلها، وإنه ما تشوفي بحياتك غير الفرح وراحة البال، وإنه كل أحلامك تتحقّق وحدة وحدة يا روحي. 
+
+يمكن ما بعرف أوصفلك قديش بحبك، ويمكن كل الكلام بالدنيا ما بكفّي حتى يشرحلك شو مكانتك بقلبي، بس بدي إياكي تعرفي إنك مو مجرد حبيبتي، إنتِ الشخص اللي بختاره كل يوم، واللي بتمنّى أعيش معه كل أعيادي وكل أيامي الجايّة. نفسي أكون سبب ضحكتك، وأمانك وقت خوفك، وكتفك وقت تعبك، والشخص اللي تلاقيه جنبك مهما شو صار. 
+
+بعيد ميلادك، بتمنّى لو بقدر أعطيكي من عمري فرحة، ومن قلبي أمان، ومن عيوني أشوفك دايمًا مبسوطة. وكل سنة وإنتِ معي، وكل سنة وأنا بحبك أكتر من السنة اللي قبلها، وكل سنة وإنتِ أجمل أقداري وأحلى نصيب كتبه إلي ربّي. بحبك يا عمري، وإن شاء الله أضل أعايدك وأنا ماسك إيدك، ونحتفل بأعياد ميلادك سنين وسنين وإحنا سوا. 
+
+عيد ميلاد سعيد يا قطعة من قلبي، ويا أحلى صدفة صارت بعمري، ويا أجمل إنسانة بتمنّى تكون إلي اليوم وبكرا ولآخر العمر. بحبك قد الدنيا وما فيها، وكل عام وإنتِ إلي وأنا إلك يا روحي              
+                
+          </p>
+
+       
+          <p style="text-align:center;font-weight:bold">
+            بحبك يا ملاك… اليوم وكل يوم ♡
+          </p>
+        </div>
+
+        <div class="env-flap"></div>
+        <div class="seal">♥</div>
+        <div class="env-front"></div>
+
+      </div>
+    </div>
+
+    <div class="tap-note" id="tapNote">
+      اضغطي على الظرف ليفتح ✨
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <h2>لممرضتي المميزة 🩺</h2>
+
+  <p class="sub">
+    شغلك مش بس مهنة… هو قلب بيعرف يطمن، وإيد بتساعد،
+    وروح بتترك أثر حلو حتى بأصعب الأيام.
+  </p>
+
+  <div class="nurse-grid">
+
+    <div class="nurse-item">
+      <span class="nurse-icon">🩺</span>
+      <div>
+        <strong>قلب حنون</strong>
+        <span>وجودك لحاله ممكن يطمن قلب تعبان.</span>
+      </div>
+    </div>
+
+    <div class="nurse-item">
+      <span class="nurse-icon">🤍</span>
+      <div>
+        <strong>روح بتداوي</strong>
+        <span>طيبتك أجمل من أي دواء، وابتسامتك إلها أثر.</span>
+      </div>
+    </div>
+
+    <div class="nurse-item">
+      <span class="nurse-icon">✨</span>
+      <div>
+        <strong>بطلة كل يوم</strong>
+        <span>فخور فيكِ وبكل تعب بتتعبيه عشان غيرك.</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="cake">🎂</div>
+
+  <h2>أمنيات من قلبي إلكِ</h2>
+
+  <p class="sub">
+    لو بقدر أهديكِ أشياء بعدد نجوم السما،
+    برضه ما بكفّوا قدّيش بتستاهلي الفرح.
+  </p>
+
+  <div class="wishes">
+
+    <div class="wish">
+      <b>♡ سعادة</b>
+      تضل ضحكتك منوّرة أيامك.
+    </div>
+
+    <div class="wish">
+      <b>✧ نجاح</b>
+      كل خطوة تقرّبك من أحلامك.
+    </div>
+
+    <div class="wish">
+      <b>🌷 راحة</b>
+      أيام هادية وقلب مطمئن.
+    </div>
+
+    <div class="wish">
+      <b>💗 حب</b>
+      حب يليق بقلبك الجميل.
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="card">
+
+    <div class="heart">♥</div>
+
+    <h2>ممرضتي  </h2>
+
+    <p class="final-note">
+      يمكن ما عندي هدية بتوصف كل اللي بقلبي،
+      <br>
+      بس عندي أمنية بتتكرر كل سنة:
+      <br>
+      <strong>
+        إنك تظلي مبسوطة، ومطمئنة، ومحققة كل اللي بتحلمي فيه.
+      </strong>
+      <br>
+      لا تنسي قديش إنتِ غالية، وقديش وجودك بيفرق.
+      <br>
+      كل عام وإنتِ حبيبتي، وممرضتي، وأجمل ملاك بحياتي.  و مهما كتبت مش راح اقدر اوصف الي ف قلبي 
+    </p>
+
+    <button class="btn" id="giftBtn">
+      اضغطي للهدية الأخيرة 🎁
+    </button>
+
+    <div id="lastGift" class="hidden" style="padding-top:22px">
+
+      <div style="font-size:4rem;animation:float 3s infinite">
+        💝
+      </div>
+
+      <p class="final-note">
+            يا ملاك شفتي نكدك بعشقو اشكر كلشي ف الحياه الي عرفني عليكي    
+        <br>
+        <strong>Happy Birthday, my nurse ♡</strong>
+      </p>
+
+      <p style="color:#f8d9a0">
+         من شخص بحبك اكثر مما تتخيلي و تعلم الحب ع ايدك   
+      </p>
+
+      <button class="btn" id="confettiBtn">
+        خلّي السما تحتفل فيكِ ✨
+      </button>
+
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="footer">
+  صُنعت بحب لملاك ♡ • يوم ميلادكِ حكاية حلوة
+</div>
+
+</main>
+
+
+<script>
+const startBtn = document.getElementById('startBtn');
+const surprise = document.getElementById('surprise');
+
+startBtn.addEventListener('click', () => {
+  surprise.classList.add('show');
+
+  startBtn.textContent = 'المفاجأة إلكِ يا ملاك ♡';
+  startBtn.disabled = true;
+
+  setTimeout(() => {
+    surprise.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }, 100);
+
+  confettiBurst(32);
+});
+
+
+const envelope = document.getElementById('envelope');
+const tapNote = document.getElementById('tapNote');
+
+function toggleEnvelope() {
+  envelope.classList.toggle('open');
+
+  tapNote.textContent = envelope.classList.contains('open')
+    ? 'رسالتك انفتحت… خذي وقتك واقرئيها بحب ♡'
+    : 'اضغطي على الظرف ليفتح ✨';
+
+  if (envelope.classList.contains('open')) {
+    confettiBurst(12);
+  }
+}
+
+envelope.addEventListener('click', toggleEnvelope);
+
+envelope.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    toggleEnvelope();
+  }
+});
+
+
+document.getElementById('giftBtn').addEventListener('click', () => {
+  document.getElementById('lastGift').classList.remove('hidden');
+
+  document.getElementById('giftBtn').textContent =
+    'الهدية صارت إلكِ ♡';
+
+  confettiBurst(25);
+});
+
+
+document.getElementById('confettiBtn').addEventListener('click', () => {
+  confettiBurst(90);
+});
+
+
+function confettiBurst(amount) {
+  const symbols = ['♥', '♡', '✦', '✧', '🌸', '💗'];
+
+  for (let i = 0; i < amount; i++) {
+    const el = document.createElement('span');
+
+    el.className = 'confetti';
+
+    el.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    el.style.left = Math.random() * 100 + 'vw';
+
+    el.style.color = [
+      '#ff8dbd',
+      '#f8d9a0',
+      '#ffffff',
+      '#ff4f91'
+    ][Math.floor(Math.random() * 4)];
+
+    el.style.fontSize = (12 + Math.random() * 18) + 'px';
+
+    el.style.animationDuration = (3 + Math.random() * 4) + 's';
+
+    el.style.animationDelay = (Math.random() * .8) + 's';
+
+    document.body.appendChild(el);
+
+    setTimeout(() => el.remove(), 8000);
+  }
+}
+
+
+window.addEventListener('scroll', () => {
+  const max =
+    document.documentElement.scrollHeight - window.innerHeight;
+
+  document.getElementById('progress').style.width =
+    (max > 0 ? window.scrollY / max * 100 : 0) + '%';
+});
+</script>
+
+</body>
+</html>
